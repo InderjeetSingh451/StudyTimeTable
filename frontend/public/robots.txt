@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://study-planner-make-you-time-table.onrender.com/sitemap.xml
+Sitemap: https://studytimetable-9nzl.onrender.com/sitemap.xml
+
