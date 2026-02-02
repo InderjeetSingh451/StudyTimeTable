@@ -7,10 +7,14 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white shadow px-6 py-4 flex justify-between items-center">
-      <Link to="/" className="text-xl font-bold">
-        <span className="text-gray-900">Study</span>{" "}
-        <span className="text-blue-600">Planner</span>
-      </Link>
+      <Link
+  to="/"
+  className="text-2xl font-extrabold tracking-tight flex items-center"
+>
+  <span className="text-indigo-900">Study</span>
+  <span className="text-indigo-500 ml-0.5">Planner</span>
+</Link>
+
 
       {user && (
         <button
@@ -23,3 +27,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
