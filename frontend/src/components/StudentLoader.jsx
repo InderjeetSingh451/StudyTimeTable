@@ -1,5 +1,5 @@
 import React from "react";
-import "../StudentLoader.css";
+import "./StudentLoader.css";
 export default function StudentLoader({ text = "Preparing your study plan" }) {
   return (
     <div className="student-loader">
@@ -26,3 +26,4 @@ export default function StudentLoader({ text = "Preparing your study plan" }) {
     </div>
   );
 }
+
