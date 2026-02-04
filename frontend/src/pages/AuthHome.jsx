@@ -8,13 +8,15 @@ export default function AuthHome() {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-            Welcome back, {firstName}
+      <section className="relative bg-gradient-to-br from-indigo-700 via-blue-700 to-indigo-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-white/5 backdrop-blur-sm"></div>
+
+        <div className="relative max-w-7xl mx-auto px-6 py-24">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight tracking-tight">
+            Welcome back, <span className="text-blue-200">{firstName}</span>
           </h1>
 
-          <p className="text-lg text-blue-100 max-w-2xl mb-10">
+          <p className="text-lg md:text-xl text-blue-100 max-w-2xl mb-12 leading-relaxed">
             A structured way to plan, execute, and track your interview
             preparation — day by day, slot by slot.
           </p>
@@ -22,14 +24,17 @@ export default function AuthHome() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               to="/app/dashboards"
-              className="px-8 py-4 rounded-xl bg-white text-blue-700 font-semibold text-lg hover:bg-gray-100 transition"
+              className="px-8 py-4 rounded-xl bg-white text-indigo-700 font-semibold text-lg
+                   shadow-lg hover:shadow-xl hover:bg-gray-100 transition"
             >
               My Time-Tables
             </Link>
 
             <Link
               to="/app/dashboards/create"
-              className="px-8 py-4 rounded-xl bg-black/20 border border-white/30 text-white font-semibold text-lg hover:bg-black/30 transition"
+              className="px-8 py-4 rounded-xl bg-white/10 backdrop-blur
+                   border border-white/30 text-white font-semibold text-lg
+                   hover:bg-white/20 transition"
             >
               Create New Time-Table
             </Link>
