@@ -10,14 +10,15 @@ export default function Navbar() {
       {/* Logo */}
       <Link
         to="/"
-        className="border-2 border-black px-6 py-2 text-lg font-semibold"
+        className="px-6 py-2 text-2xl font-extrabold tracking-tight flex items-center"
       >
-        Logo
+        <span className="text-blue-700">Study</span>
+        <span className="text-green-600 ml-1">Planner</span>
       </Link>
 
       {user && (
         <div className="flex items-center gap-4">
-          {/* Avatar Circle */}
+          {/* User Initial Circle */}
           <div className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-xl font-bold uppercase">
             {user.name?.[0]}
           </div>
@@ -25,7 +26,8 @@ export default function Navbar() {
           {/* Logout */}
           <button
             onClick={logout}
-            className="border-2 border-black px-4 py-2 text-sm font-medium hover:bg-black hover:text-white transition"
+            className="border-2 border-black px-4 py-2 text-sm font-medium
+                       hover:bg-black hover:text-white transition"
           >
             Logout
           </button>
