@@ -6,7 +6,7 @@ export default function Navbar() {
   const { user, logout } = useContext(AuthContext);
 
   return (
-    <nav className="border-2 border-black px-6 py-3 flex justify-between items-center">
+    <nav className="px-6 py-3 flex justify-between items-center">
       {/* Logo */}
       <Link
         to="/"
@@ -27,7 +27,7 @@ export default function Navbar() {
           <button
             onClick={logout}
             className="border-2 border-black px-4 py-2 text-sm font-medium
-                       hover:bg-black hover:text-white transition"
+                       hover:bg-red-600 hover:text-white transition bg-red-400"
           >
             Logout
           </button>
@@ -36,3 +36,4 @@ export default function Navbar() {
     </nav>
   );
 }
+
