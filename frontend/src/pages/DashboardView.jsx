@@ -3,6 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import API from "../services/api";
 import DayCard from "../components/DayCard";
 import { Helmet } from "react-helmet-async";
+import StudentLoader from "../components/StudentLoader";
 export default function DashboardView() {
   const { id } = useParams();
   const [dashboard, setDashboard] = useState(null);
@@ -21,7 +22,7 @@ export default function DashboardView() {
   if (loading)
     return (
       <div className="flex justify-center items-center min-h-[60vh]">
-        Loading...
+         <StudentLoader text="Opening your timetable" />
       </div>
     );
 
@@ -127,3 +128,4 @@ export default function DashboardView() {
     </div>
   );
 }
+
