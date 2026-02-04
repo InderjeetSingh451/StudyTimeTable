@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import API from "../services/api";
 import ProgressBar from "../components/ProgressBar";
 import { formatTime } from "../utils/time";
-
+import StudentLoader from "../components/StudentLoader";
 export default function DayView() {
   const { id, dayNumber } = useParams();
   const dayNum = Number(dayNumber);
@@ -27,7 +27,7 @@ export default function DayView() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-[60vh] text-gray-500">
-        Loading day plan...
+       <StudentLoader text="Loading your daily study plan" />
       </div>
     );
   }
@@ -182,3 +182,4 @@ export default function DayView() {
     </div>
   );
 }
+
