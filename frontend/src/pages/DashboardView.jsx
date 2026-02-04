@@ -49,34 +49,51 @@ export default function DashboardView() {
       <Helmet>
         <title>Study Planner | Time Table Maker</title>
       </Helmet>
-      <div className="relative rounded-3xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-10">
-        <div className="absolute top-6 right-6">
+      <div className="relative rounded-3xl bg-gradient-to-br from-indigo-700 via-blue-700 to-indigo-800 text-white p-10 overflow-hidden">
+        {/* subtle overlay for depth */}
+        <div className="absolute inset-0 bg-white/5"></div>
+
+        {/* Back button */}
+        <div className="relative flex justify-end mb-6">
           <Link
             to="/app/dashboards"
-            className="px-4 py-2 rounded-xl border border-white/40 bg-white/10 backdrop-blur text-sm font-medium hover:bg-white/20 transition"
+            className="px-4 py-2 rounded-xl border border-white/30 bg-white/10 backdrop-blur
+                 text-sm font-medium hover:bg-white/20 transition"
           >
             ← All Time-Tables
           </Link>
         </div>
 
-        <h1 className="text-3xl font-bold mb-2">{dashboard.title}</h1>
-        <p className="text-blue-100 mb-8">
+        {/* Title */}
+        <h1 className="relative text-3xl font-extrabold mb-2 tracking-tight">
+          {dashboard.title}
+        </h1>
+
+        <p className="relative text-blue-100 mb-10 max-w-xl">
           Structured learning. Daily execution. Measurable progress.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div className="bg-white/15 rounded-xl p-5">
-            <div className="text-sm text-blue-100">TOTAL DAYS</div>
-            <div className="text-2xl font-bold">{dashboard.totalDays}</div>
+
+        {/* Stats */}
+        <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="rounded-2xl bg-white/15 backdrop-blur p-6">
+            <div className="text-xs font-medium text-blue-100 tracking-wider">
+              TOTAL DAYS
+            </div>
+            <div className="text-3xl font-bold mt-1">{dashboard.totalDays}</div>
           </div>
 
-          <div className="bg-white/15 rounded-xl p-5">
-            <div className="text-sm text-blue-100">COMPLETED DAYS</div>
-            <div className="text-2xl font-bold">{completedDays}</div>
+          <div className="rounded-2xl bg-white/15 backdrop-blur p-6">
+            <div className="text-xs font-medium text-blue-100 tracking-wider">
+              COMPLETED DAYS
+            </div>
+            <div className="text-3xl font-bold mt-1">{completedDays}</div>
           </div>
 
-          <div className="bg-white/15 rounded-xl p-5">
-            <div className="text-sm text-blue-100">OVERALL PROGRESS</div>
-            <div className="text-2xl font-bold">
+          <div className="rounded-2xl bg-white/15 backdrop-blur p-6">
+            <div className="text-xs font-medium text-blue-100 tracking-wider">
+              OVERALL PROGRESS
+            </div>
+            <div className="text-3xl font-bold mt-1">
               {dashboard.overallProgress}%
             </div>
           </div>
