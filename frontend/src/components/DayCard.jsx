@@ -2,7 +2,6 @@ import React from "react";
 import ProgressBar from "./ProgressBar";
 
 export default function DayCard({ day, locked, onClick }) {
-  console.log(day);
   return (
     <div
       onClick={() => !locked && onClick()}
@@ -59,3 +58,4 @@ export default function DayCard({ day, locked, onClick }) {
     </div>
   );
 }
+
