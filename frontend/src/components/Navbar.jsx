@@ -17,14 +17,19 @@ export default function Navbar() {
 
 
       {user && (
-        <button
+        <>
+            <span>{user.name}</span>
+           <button
           onClick={logout}
           className="px-4 py-2 bg-red-500 text-white rounded-lg"
         >
           Logout
         </button>
+        </>
+       
       )}
     </nav>
   );
 }
+
 
