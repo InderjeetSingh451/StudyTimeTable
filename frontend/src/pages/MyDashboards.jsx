@@ -3,7 +3,7 @@ import API from "../services/api";
 import { Link } from "react-router-dom";
 import ProgressBar from "../components/ProgressBar";
 import { setSEO } from "../utils/seo";
-
+import StudentLoader from "../components/StudentLoader";
 export default function MyDashboards() {
   const [dashboards, setDashboards] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -28,7 +28,7 @@ export default function MyDashboards() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-[60vh] text-gray-500">
-        Loading your plans...
+       <StudentLoader text="Preparing your study workspace" />
       </div>
     );
   }
@@ -162,3 +162,4 @@ export default function MyDashboards() {
     </div>
   );
 }
+
